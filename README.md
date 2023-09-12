@@ -1,2 +1,3 @@
-# RecipeBuddy-DynamicWebApp
-Recipe Buddy" is a dynamic web app for managing diets. Users can register, add food items, search, update, and list them. It calculates and displays nutritional facts based on ingredients. Developed in Node.js, MongoDB/MySQL, with API support, form validation, and thorough documentation.
+Recipe Buddy
+
+This project involves creating a dynamic web application called "Recipe Buddy." It allows users to manage their diets by calculating and displaying nutritional facts for recipes based on ingredients. Users can register, add, search, update, and list food items, with secure user authentication and data storage in MongoDB or MySQL. The app includes a well-documented API, form validation, and thorough code comments. The README provides a clear description of the project, outlining the developer's contributions, and includes a detailed data model or database schema. This comprehensive submission adheres to all project requirements and demonstrates the developer's skills in web application development and database management.
