@@ -1,0 +1,91 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: darkcyan;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: cadetblue;
+}
+
+p,
+li {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid a img {
+  transition: all .1s ease-in;
+  filter: grayscale(100%);
+}
+
+.grid a:hover img {
+  filter: grayscale(0);
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+#leftThing {
+  width: 25%;
+  background-color: blue;
+}
+
+#content {
+  width: 50%;
+  background-color: green;
+}
+
+#rightThing {
+  width: 25%;
+  background-color: yellow;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  /* Style links inside navbar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #005d3b;
+  }
+  
+  /* color of active link */
+  .topnav a.active {
+    background-color: #06b474;
+    color: white;
+  }

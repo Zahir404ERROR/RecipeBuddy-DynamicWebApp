@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Login for <%=shopName%>
+  </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="./">Home</a>
+    <a href="addfood">Add Food</a>
+    <a href="listfood">List Food</a>
+    <a href="search">Search</a>
+    <a href="about">About Us</a>
+    <a href="api">API</a>
+    <a href="register">Register</a>
+    <a href="login">Login</a>
+    <a href="logout">Logout</a>
+  </div> 
+  
+  <h1>Login for Recipe Buddy
+  </h1>
+  <!-- Login Form  -->
+  <form method="POST" action="/loggedin">
+    <p>Username: <input id="user" type="text" name="user" value="user" /></p>
+    <p>Password: <input id="pass" type="text" name="pass" value="pass" /></p>
+    <input type="submit" value="Login" />
+  </form>
+</body>
+
+</html>

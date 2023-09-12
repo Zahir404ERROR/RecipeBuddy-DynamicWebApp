@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Register for <%=shopName%>
+  </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="./">Home</a>
+    <a href="addfood">Add Food</a>
+    <a href="listfood">List Food</a>
+    <a href="search">Search</a>
+    <a href="about">About Us</a>
+    <a href="api">API</a>
+    <a href="register">Register</a>
+    <a href="login">Login</a>
+    <a href="logout">Logout</a>
+  </div> 
+  <h1>Register for Recipe Buddy
+  </h1>
+
+  <!-- Registration Form -->
+  <form method="POST" action="/registered">
+    <p>First name: <input id="first" type="text" name="first" value="first name" /></p>
+    <p>Last name: <input id="last" type="text" name="last" value="last name" /></p>
+    <p>Username: <input id="user" type="text" name="user" value="user" /></p>
+    <p>Password: <input id="pass" type="text" name="pass" value="pass" /></p>
+    <p>Email: <input id="email" type="email" name="email" value="email" /></p>
+    <input type="submit" value="Register" />
+  </form>
+</body>
+
+</html>

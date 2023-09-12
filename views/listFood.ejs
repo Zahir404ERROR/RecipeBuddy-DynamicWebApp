@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Welcome to <%=shopName%>
+  </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="./">Home</a>
+    <a href="addfood">Add Food</a>
+    <a class="active" href="listfood">List Food</a>
+    <a href="updatefood">Update Food</a>
+    <a href="search">Search</a>
+    <a href="about">About Us</a>
+    <a href="api">API</a>
+    <a href="register">Register</a>
+    <a href="login">Login</a>
+    <a href="logout">Logout</a>
+  </div>
+  <h1>
+    Recipe Buddy Shop
+  </h1>
+  <h2>Here are the books that we sell:</h2>
+    <table>
+      <tr>
+        <th> </th>
+        <th>Name</th>
+        <th>Values per</th>
+        <th>Unit</th>
+        <th>Carbs</th>
+        <th>Fat</th>
+        <th>Protein</th>
+        <th>Salt</th>
+        <th>Sugar</th>
+        <th>Quantity (between 1 and 5)</th>
+      </tr>
+    <% availableBooks.forEach(function(food) { %>
+      <form method="POST" action="/calculatenutri">
+      <tr>
+        <td><input id= "selected" type="checkbox" name= "selected" value="<%=food.id%>, <%= food.name %>,<%=food.valuesper%>,<%=food.unit%>,<%=food.carbs%>,<%=food.fat%>,<%=food.protein%>,<%=food.salt%>,<%=food.sugar%>"></td>
+        <td><%=food.name%></td>
+        <td><%=food.valuesper%></td>
+        <td><%=food.unit%></td>
+        <td><%=food.carbs%></td>
+        <td><%=food.fat%></td>
+        <td><%=food.protein%></td>
+        <td><%=food.salt%></td>
+        <td><%=food.sugar%></td>
+        <td><input type="number" id="quantity_<%=food.id%>" name="quantity_<%=food.id%>" value=1 min="1" max="5"></td>
+      </tr>
+      <% }) %>
+    </table> 
+    <input type="submit" value="Calulate">
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Add book to <%=shopName%>
+  </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <h1>Welcome <%=usrId%> to Recipe Buddy</h1>
+  <div class="topnav">
+    <a href="./">Home</a>
+    <a class="active" href="addfood">Add Food</a>
+    <a href="listfood">List books</a>
+    <a href="search">Search</a>
+    <a href="about">About Us</a>
+    <a href="api">API</a>
+    <a href="register">Register</a>
+    <a href="login">Login</a>
+    <a href="logout">Logout</a>
+  </div>
+  <p><a href="./">Home</a></p>
+  <h1>
+    Add Food
+  </h1>
+  <form method="POST" action="/foodadded">
+    <p>Name: <input id="name" type="text" name="name" value="" /></p>
+    <p>Typical values per: <input id="valuesper" type="text" name="valuesper" value="" /></p>
+    <p>Unit of the typical value: <input id="unit" type="text" name="unit" value="" /></p>
+    <p>Carbs: <input id="carbs" type="text" name="carbs" value="" /></p>
+    <p>Fat: <input id="fat" type="text" name="fat" value="" /></p>
+    <p>Protein: <input id="protein" type="text" name="protein" value="" /></p>
+    <p>Salt: <input id="salt" type="text" name="salt" value="" /></p>
+    <p>Sugar: <input id="sugar" type="text" name="sugar" value="" /></p>
+    <input type="submit" value="Add Food" />
+  </form>
+</body>
+
+</html>

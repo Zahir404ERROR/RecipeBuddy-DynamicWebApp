@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Welcome to <%=shopName%>
+  </title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="./">Home</a>
+    <a href="addfood">Add Food</a>
+    <a class="active" href="listfood">List Food</a>
+    <a class="active" href="updatefood">Update Food</a>
+    <a href="search">Search</a>
+    <a href="about">About Us</a>
+    <a href="api">API</a>
+    <a href="register">Register</a>
+    <a href="login">Login</a>
+    <a href="logout">Logout</a>
+  </div>
+  <h1>
+    Recipe Buddy Shop
+  </h1>
+  <h2>Here are the books that we sell:</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Typical values per:</th>
+      <th>Unit of the typical value:</th>
+      <th>Carbs</th>
+      <th>Fat</th>
+      <th>Protein</th>
+      <th>Salt</th>
+      <th>Sugar</th>
+    </tr>
+    <% availableBooks.forEach(function(food) { %>
+      <form method="POST" action="/foodupdater">
+        <tr>
+          <td>
+            <input id="name" type="text" name="name" value=<%=food.name %> />
+          </td>
+          <td>
+            <input id="valuesper" type="text" name="valuesper" value=<%=food.valuesper%> />
+          </td>
+          <td>
+           <input id="unit" type="text" name="unit" value=<%=food.unit%> />
+          </td>
+          <td>
+            <input id="carbs" type="text" name="carbs" value=<%=food.carbs%> />
+          </td>
+          <td>
+            <input id="fat" type="text" name="fat" value=<%=food.fat%> />
+          </td>
+          <td>
+            <input id="protein" type="text" name="protein" value=<%=food.protein%> />
+          </td>
+          <td>
+            <input id="salt" type="text" name="salt" value=<%=food.salt%> />
+          </td>
+          <td>
+           <input id="sugar" type="text" name="sugar" value=<%=food.sugar%> />
+          </td>
+          <td><input type="submit" value="Update" /></td>
+      </form>
+      <form method="POST" action="/delete">
+        <td><input id="id" type="hidden" name="id" value=<%=food.id%> /></td>
+        <td><input type="submit" onclick="return confirm('Are you sure?')" value="Delete" /></td>
+      </form>
+    </tr>
+
+      <% }) %>
+  </table>
+</body>
+
+</html>
